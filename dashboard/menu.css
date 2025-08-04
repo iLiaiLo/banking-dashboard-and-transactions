@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.project-container {
+  background-image: linear-gradient(#f0f8ff, #ffffff);
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  flex-wrap: wrap-reverse;
+  gap: 15px;
+  padding: 5px;
+}
+
+/* --------------------navigation------------------------------------------------- */
+.navigation {
+  padding: 10px;
+  background-image: linear-gradient(45deg, #cae7f1, #f0f8ff, #fff, #cae7f1);
+  box-shadow: 0 0 5px #1e90ff, 0 0 10px #0000ff inset;
+  border-radius: 10px;
+  width: 28%;
+}
+@media screen and (max-width: 912px) {
+  .navigation {
+    flex: 1 1 100%;
+  }
+}
+/* -------------------user profile------------------------------- */
+.user-profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px #808080;
+  cursor: pointer;
+}
+
+.user-profile img {
+  width: 50px;
+  object-fit: conver;
+  border-radius: 50%;
+}
+.user-profile span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user-profile:hover {
+  box-shadow: 0 3px 5px #808080;
+}
+
+.user-profile .logout-btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #f0f8ff;
+  font-size: 20px;
+  color: #525656;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #525656;
+  cursor: pointer;
+}
+
+.user-profile .logout-btn:hover {
+  box-shadow: 0 0 7px #525656;
+}
+
+/* ---------------------home---------------------------- */
+
+.home {
+  width: fit-content;
+  margin-top: 30px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.home:hover {
+  color: #20d0d0;
+  transition: 0.5s;
+}
+
+/* ----------------other sections----------------------------- */
+.nav-section {
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 3px #242525;
+  margin-top: 50px;
+}
+.nav-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav-section header {
+  font-size: clamp(22px, 2vw, 2.5rem);
+  font-weight: bold;
+  padding: 0;
+}
+
+.nav-section ul > li {
+  width: fit-content;
+  list-style-type: none;
+  margin-left: -30px;
+  font-size: clamp(18px, 2vw, 1.5rem);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-section ul > li:hover {
+  color: #20d0d0;
+  transition: 0.5s;
+}
+
+/* -------------------------------main-menu ----------------------------------*/
+
+.main-menu {
+  margin-top: 70px;
+}

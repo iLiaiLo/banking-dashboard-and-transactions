@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>dashboard</title>
+  </head>
+  <body>
+    <section class="project-container">
+      <nav class="navigation">
+        <section class="user-profile">
+          <img src="assets/profile-image.jpg" alt="image" />
+          <span>John Doe</span>
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </section>
+        <section class="main-menu">
+          <section class="home"><i class="fas fa-home"></i> Home</section>
+          <section class="nav-section">
+            <header>Profile managment</header>
+            <ul>
+              <li><i class="fas fa-user-circle"></i> Accounts</li>
+            </ul>
+          </section>
+          <section class="nav-section">
+            <header>Financial Management</header>
+            <ul>
+              <li><i class="fas fa-exchange-alt"></i> Transactions</li>
+              <li><i class="fas fa-chart-pie"></i> Budgeting</li>
+              <li><i class="fas fa-piggy-bank"></i> Savings and Goals</li>
+            </ul>
+          </section>
+          <section class="nav-section">
+            <header>Investments</header>
+            <ul>
+              <li><i class="fas fa-chart-line"></i> Investments</li>
+            </ul>
+          </section>
+          <section class="nav-section">
+            <header>Accaunt and System settings</header>
+            <ul>
+              <li><i class="fas fa-cog"></i> Settings</li>
+              <li><i class="fas fa-bell"></i> Alerts</li>
+              <li><i class="fas fa-question-circle"></i> Help</li>
+            </ul>
+          </section>
+        </section>
+      </nav>
+
+      <section class="dashboard">
+        <div class="dark-light">
+          <input type="checkbox" />
+        </div>
+
+        <div class="total-amount">
+          <div>Total amount spent this month:</div>
+          <div>$1500.00</div>
+        </div>
+
+        <div class="spending-categories-container">
+          <h2>Spending Categories</h2>
+          <div class="spending-categories">
+            <div class="spending-category">
+              <header>Groceries</header>
+              <div>
+                <div class="progress-bar" id="Groceries"></div>
+                <div>50%</div>
+              </div>
+              <footer>Amount Spent: $750.00</footer>
+            </div>
+            <div class="spending-category">
+              <header>Utilities</header>
+              <div>
+                <div class="progress-bar" id="Utilities"></div>
+                <div>30%</div>
+              </div>
+              <footer>Amount Spent: $450.00</footer>
+            </div>
+            <div class="spending-category">
+              <header>Entertainment</header>
+              <div>
+                <div class="progress-bar" id="Entertainment"></div>
+                <div>15%</div>
+              </div>
+              <footer>Amount Spent: $225.00</footer>
+            </div>
+            <div class="spending-category">
+              <header>Dining Out</header>
+              <div>
+                <div class="progress-bar" id="Dining-Out"></div>
+                <div>5%</div>
+              </div>
+              <footer>Amount Spent: $75.00</footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="accounts-balances-container">
+          <h2>Bank Accounts Balances</h2>
+          <div class="accounts-balances">
+            <div class="account-card">
+              <h3>Checking Account</h3>
+              <p>Balance: $1,250.00</p>
+            </div>
+            <div class="account-card">
+              <h3>Savings Account</h3>
+              <p>Balance: $5,000.00</p>
+            </div>
+            <div class="account-card">
+              <h3>Money Market Account</h3>
+              <p>Balance: $2,500.00</p>
+            </div>
+            <div class="account-card">
+              <h3>Certificate of Deposit</h3>
+              <p>Balance: $10,000.00</p>
+            </div>
+            <div class="account-card">
+              <h3>Retirement Account</h3>
+              <p>Balance: $15,000.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

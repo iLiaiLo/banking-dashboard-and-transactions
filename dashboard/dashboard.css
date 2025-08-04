@@ -1,0 +1,247 @@
+:root {
+  --box-shadow: 0 2px 5px #293036;
+  --height: 20px;
+  --color: #1a1919;
+}
+
+.dashboard {
+  background-image: linear-gradient(45deg, #cae7f1, #f0f8ff, #fff, #cae7f1);
+  box-shadow: 0 0 5px #1e90ff, 0 0 10px #0000ff inset;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 12px;
+  width: 65%;
+}
+
+@media screen and (max-width: 912px) {
+  .dashboard {
+    flex: 1 1 100%;
+  }
+}
+/* ----------------------------------accaunts balances--------------------------------- */
+.accounts-balances-container {
+  box-shadow: 0 2px 5px #293036;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+.accounts-balances-container > h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.accounts-balances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .accounts-balances {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* -------------------------------accaunt card ----------------------------------------*/
+
+.account-card {
+  padding: 5px;
+  width: 100%;
+  background-color: #2d65d5;
+  background-image: linear-gradient(45deg, #00008b, #2d65d5);
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 2px 4px 4px #434343;
+}
+
+.account-card > p {
+  font-size: 18px;
+}
+
+.account-card > h3 {
+  font-size: 20px;
+}
+
+/*------------------------------------ spending categories ------------------------------------*/
+
+.spending-categories-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 15px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.spending-categories-container > h2 {
+  text-align: center;
+  font-size: 30px;
+}
+.spending-categories {
+  display: flex;
+
+  flex-direction: column;
+  gap: 20px;
+}
+.spending-category {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.spending-category > header {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color);
+  padding: 0;
+}
+
+.spending-category > footer {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+/* --------------------progress bars------------------------- */
+
+@keyframes width1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes width2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+@keyframes width3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes width4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 5%;
+  }
+}
+.progress-bar {
+  width: 90%;
+  height: var(--height);
+  border-radius: 20px;
+  background-color: #eaeaea;
+  box-shadow: 0 0 5px #a4a4a4, 0 0 3px #232222 inset;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  background-color: #2d65d5;
+  border-radius: 20px;
+}
+
+#Groceries::before {
+  width: 50%;
+  animation: width1 1.5s ease;
+  height: var(--height);
+}
+
+#Utilities::before {
+  width: 30%;
+  animation: width2 1.5s ease;
+  height: var(--height);
+}
+#Entertainment::before {
+  width: 15%;
+  animation: width3 1.5s ease;
+  height: var(--height);
+}
+
+#Dining-Out::before {
+  width: 5%;
+  animation: width4 1.5s ease;
+  height: var(--height);
+}
+
+.spending-category > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spending-category > div > div:last-child {
+  font-size: 20px;
+}
+/* ----------------------total amount------------------- */
+
+.total-amount {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.total-amount > div {
+  color: var(--color);
+  font-size: clamp(22px, 3vw, 2.5rem);
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  .total-amount {
+    display: block;
+  }
+}
+/* ---------------------------dark-light-------------------------------- */
+.dark-light {
+  transition: 0.5s;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.dark-light > input {
+  cursor: pointer;
+}
+.dark-light > input:checked::after {
+  transition: 0.5s;
+  transform: translate(25px, -5px);
+}
+
+.dark-light > input::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #31d8d8;
+  box-shadow: 0 0 5px #808080 inset, 0 0 5px #31d8d8;
+  border-radius: 50%;
+  transform: translate(-1px, -5px);
+  transition: 0.5s;
+}
+
+.dark-light > input::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: #e8e7e7;
+  box-shadow: 0 0 5px #808080 inset, 0 0 3px #e0e0e0;
+  transform: translate(-1px, -5px);
+  border-radius: 50px;
+}
